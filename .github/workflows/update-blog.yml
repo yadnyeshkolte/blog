@@ -9,16 +9,17 @@ jobs:
     steps:
       - name: Checkout blog repository
         uses: actions/checkout@v3
-        
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: '3.2.3'
           bundler-cache: true
-      
+
       - name: Install YAML processor
         run: |
           pip install pyyaml
-      
+
       - name: Fetch content from repositories
         run: |
           mkdir -p _posts
@@ -79,12 +80,12 @@ jobs:
               except Exception as e:
                   print(f"Error processing {repo_name}/{file_path}: {e}")
           EOF
-      
+
       - name: Build Jekyll site
         run: |
           bundle install
           bundle exec jekyll build
-      
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
