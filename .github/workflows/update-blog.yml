@@ -107,4 +107,4 @@ permalink: /{safe_name}/
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
+          publish_branch: develop
