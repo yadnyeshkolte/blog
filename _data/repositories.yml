@@ -1,0 +1,37 @@
+# List of repositories to pull README files from
+repositories:
+  - name: "OpenSourcePen"
+    repo: "yadnyeshkolte/opensourcepen"
+    file: "README.md"
+    title: "OpenSourcePen Documentation"
+    description: "An open source pen plotting library"
+    
+  - name: "StructViz3D React"
+    repo: "yadnyeshkolte/structviz3d-react"
+    file: "README.md"
+    title: "StructViz3D React Component"
+    description: "React component for 3D structure visualization"
+    
+  - name: "StructViz3D Documentation"
+    repo: "yadnyeshkolte/structviz3d-react"
+    file: "Documentation.md"
+    title: "StructViz3D Complete Documentation"
+    description: "Full documentation for the StructViz3D library"
+    
+  - name: "CrossDocs"
+    repo: "yadnyeshkolte/CrossDocs"
+    file: "README.md"
+    title: "CrossDocs Framework"
+    description: "Cross-platform documentation framework"
+    
+  - name: "StructViz3D API"
+    repo: "yadnyeshkolte/structviz3d-api"
+    file: "README.md"
+    title: "StructViz3D API Documentation"
+    description: "API documentation for the StructViz3D library"
+    
+  - name: "SVG Country Flags"
+    repo: "yadnyeshkolte/svg-country-flags-2x1"
+    file: "README.md"
+    title: "SVG Country Flags Collection"
+    description: "Collection of SVG country flags in 2:1 aspect ratio"
