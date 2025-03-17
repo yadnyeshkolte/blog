@@ -92,7 +92,11 @@ permalink: /{safe_name}/
               except Exception as e:
                   print(f"Error processing {repo_name}/{file_path}: {e}")
           EOF
-      
+  
+      - name: Update dependencies
+        run: |
+          bundle update listen
+
       - name: Build Jekyll site
         run: |
           bundle install
