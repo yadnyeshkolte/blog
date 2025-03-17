@@ -71,23 +71,6 @@ jobs:
               try:
                   with urllib.request.urlopen(raw_url) as response:
                       content = response.read().decode('utf-8')
-                      
-                      # Create Jekyll front matter
-                      front_matter = f"""---
-layout: post
-title: "{title}"
-date: {commit_date}
-repository: "{repo_name}"
-description: "{description}"
-original_file: "{file_path}"
-permalink: /{safe_name}/
----
-
-> This content is automatically synchronized from [{repo_name}](https://github.com/{repo_name}) repository.
-> Last updated on {commit_date}.
-
-"""
-                      
                       # Write content to file with front matter
                       with open(post_filename, 'w') as post_file:
                           post_file.write(front_matter + content)
