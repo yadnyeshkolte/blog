@@ -21,7 +21,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          bundle install
+          sudo bundle install
 
       - name: Install YAML processor
         run: |
