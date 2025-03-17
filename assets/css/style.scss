@@ -1,0 +1,29 @@
+@import "{{ site.theme }}";
+
+.project-card {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.post-description {
+  font-style: italic;
+  color: #555;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8e8e8;
+}
