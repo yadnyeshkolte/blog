@@ -79,15 +79,15 @@ jobs:
                       
                       # Create Jekyll front matter
                       front_matter = f"""---
-layout: post
-title: "{title}"
-date: {commit_date}
-repository: "{repo_name}"
-description: "{description}"
-original_file: "{file_path}"
-permalink: /{safe_name}/
----
-"""
+                        layout: post
+                        title: "{title}"
+                        date: {commit_date}
+                        repository: "{repo_name}"
+                        description: "{description}"
+                        original_file: "{file_path}"
+                        permalink: /{safe_name}/
+                        ---
+                        """
                       
                       # Write content to file with front matter
                       with open(post_filename, 'w') as post_file:
