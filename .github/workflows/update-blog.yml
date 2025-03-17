@@ -1,10 +1,8 @@
 name: Update Blog from Multiple Repositories
-
 on:
   workflow_dispatch:  # Allows manual triggering
   schedule:
-    - cron: '0 */12 * * *'  # Runs twice daily
-
+    - cron: '0 */12 * * *'  # Runs twice daily (fixed cron syntax)
 jobs:
   update-content:
     runs-on: ubuntu-latest
@@ -73,20 +71,6 @@ jobs:
                       content = response.read().decode('utf-8')
                       
                       # Create Jekyll front matter
-                      front_matter = f"""---
-layout: post
-title: "{title}"
-date: {commit_date}
-repository: "{repo_name}"
-description: "{description}"
-original_file: "{file_path}"
-permalink: /{safe_name}/
----
-
-> This content is automatically synchronized from [{repo_name}](https://github.com/{repo_name}) repository.
-> Last updated on {commit_date}.
-
-"""
                       
                       # Write content to file with front matter
                       with open(post_filename, 'w') as post_file:
