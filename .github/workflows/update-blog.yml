@@ -1,8 +1,10 @@
 name: Update Blog from Multiple Repositories
+
 on:
   workflow_dispatch:  # Allows manual triggering
   schedule:
-    - cron: '0 */12 * * *'  # Runs twice daily (fixed cron syntax)
+    - cron: '0 */12 * * *'  # Runs twice daily
+
 jobs:
   update-content:
     runs-on: ubuntu-latest
@@ -71,6 +73,16 @@ jobs:
                       content = response.read().decode('utf-8')
                       
                       # Create Jekyll front matter
+                      front_matter = f"""---
+layout: post
+title: "{title}"
+date: {commit_date}
+repository: "{repo_name}"
+description: "{description}"
+original_file: "{file_path}"
+permalink: /{safe_name}/
+---
+"""
                       
                       # Write content to file with front matter
                       with open(post_filename, 'w') as post_file:
@@ -80,7 +92,7 @@ jobs:
               except Exception as e:
                   print(f"Error processing {repo_name}/{file_path}: {e}")
           EOF
-
+      
       - name: Build Jekyll site
         run: |
           bundle install
