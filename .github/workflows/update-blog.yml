@@ -18,8 +18,6 @@ jobs:
       
       - name: Install YAML processor
         run: |
-          rm -f Gemfile.lock
-          bundle update
           pip install pyyaml
       
       - name: Fetch content from repositories
