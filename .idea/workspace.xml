@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69fd6323-8a65-4e63-9f2e-19d34156df46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/jekyll.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/jekyll.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/jekyll.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/jekyll.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

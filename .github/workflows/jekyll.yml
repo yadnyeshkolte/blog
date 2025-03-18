@@ -1,115 +1,65 @@
-name: Update Blog from Multiple Repositories
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll site to Pages
 
 on:
-  workflow_dispatch:  # Allows manual triggering
-  schedule:
-    - cron: '0 */12 * * *'  # Runs twice daily
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  update-content:
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout blog repository
-        uses: actions/checkout@v3
-
-      - name: Install Ruby using apt-get
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby-full ruby-bundler
-          ruby --version
-          bundler --version
-
-      - name: Install dependencies
-        run: |
-          sudo bundle install
-
-      - name: Install YAML processor
-        run: |
-          pip install pyyaml
-
-      - name: Fetch content from repositories
-        run: |
-          mkdir -p _posts
-          python3 <<EOF
-          import yaml
-          import os
-          import re
-          from datetime import datetime
-          import urllib.request
-          import json
-          
-          # Load repository configuration
-          with open('_data/repositories.yml', 'r') as file:
-              config = yaml.safe_load(file)
-          
-          # Get repositories list
-          repositories = config.get('repositories', [])
-          
-          for repo in repositories:
-              repo_name = repo['repo']
-              file_path = repo['file']
-              title = repo['title']
-              description = repo.get('description', '')
-              
-              # Generate a safe filename
-              safe_name = re.sub(r'[^a-zA-Z0-9]', '-', repo['name'].lower())
-              today = datetime.now().strftime('%Y-%m-%d')
-              post_filename = f"_posts/{today}-{safe_name}.md"
-              
-              # Get latest commit date for the file
-              api_url = f"https://api.github.com/repos/{repo_name}/commits?path={file_path}&per_page=1"
-              req = urllib.request.Request(api_url)
-              req.add_header('User-Agent', 'GitHub-Actions-Bot')
-              try:
-                  with urllib.request.urlopen(req) as response:
-                      commit_data = json.loads(response.read().decode())
-                      if commit_data:
-                          commit_date = commit_data[0]['commit']['committer']['date'][:10]  # YYYY-MM-DD
-                      else:
-                          commit_date = today
-              except Exception as e:
-                  print(f"Error getting commit date for {repo_name}/{file_path}: {e}")
-                  commit_date = today
-              
-              # Fetch file content
-              raw_url = f"https://raw.githubusercontent.com/{repo_name}/main/{file_path}"
-              try:
-                  with urllib.request.urlopen(raw_url) as response:
-                      content = response.read().decode('utf-8')
-                      
-                      # Create Jekyll front matter
-                      front_matter = f"""---
-                        layout: post
-                        title: "{title}"
-                        date: {commit_date}
-                        repository: "{repo_name}"
-                        description: "{description}"
-                        original_file: "{file_path}"
-                        permalink: /{safe_name}/
-                        ---
-                        """
-                      
-                      # Write content to file with front matter
-                      with open(post_filename, 'w') as post_file:
-                          post_file.write(front_matter + content)
-                      
-                      print(f"Successfully processed {repo_name}/{file_path} -> {post_filename}")
-              except Exception as e:
-                  print(f"Error processing {repo_name}/{file_path}: {e}")
-          EOF
-
-      - name: Update dependencies
-        run: |
-          sudo bundle update listen
-
-      - name: Build Jekyll site
-        run: |
-          sudo bundle install
-          sudo bundle exec jekyll build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: gh-pages
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v3
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
