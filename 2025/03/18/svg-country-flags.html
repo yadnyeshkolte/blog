@@ -1,0 +1,376 @@
+<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          layout: post
+          title: "SVG Country Flags Collection"
+          date: 2025-02-25
+          repository: "yadnyeshkolte/svg-country-flags-2x1"
+          description: "Collection of SVG country flags in 2:1 aspect ratio"
+          original_file: "README.md"
+          permalink: /svg-country-flags/
+          ---
+          # svg-country-flags-2x1 A lightweight, flexible package for working with detailed country flags in JavaScript applications. Get access to flag SVGs, emoji, and country data. All flags maintain a 2:1 aspect ratio.
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>svg-country-flags-2x1
+<span class="c"># or</span>
+yarn add svg-country-flags-2x1
+<span class="c"># or</span>
+pnpm add svg-country-flags-2x1
+</code></pre></div></div>
+<p><img src="https://raw.githubusercontent.com/yadnyeshkolte/country-flags-svg-2x1/main/assets/image.png" alt="Flags" /></p>
+
+<h2 id="basic-usage">Basic Usage</h2>
+
+<h3 id="importing-the-package">Importing the Package</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ES Modules</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// CommonJS</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="creating-an-instance">Creating an Instance</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">flags</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountryFlags</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="basic-examples">Basic Examples</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Get a flag URL</span>
+<span class="kd">const</span> <span class="nx">flagUrl</span> <span class="o">=</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagUrl</span><span class="p">(</span><span class="dl">'</span><span class="s1">us</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Returns URL for USA flag</span>
+
+<span class="c1">// Get flag with details - only width needed, height will be automatic 2:1 ratio</span>
+<span class="kd">const</span> <span class="nx">flagDetails</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="dl">'</span><span class="s1">fr</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="mi">200</span> <span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">flagDetails</span><span class="p">);</span>
+<span class="c1">// Output:</span>
+<span class="c1">// {</span>
+<span class="c1">//   code: 'fr',</span>
+<span class="c1">//   name: 'France',</span>
+<span class="c1">//   svg: '&lt;svg width="200" height="100"&gt;...&lt;/svg&gt;'</span>
+<span class="c1">// }</span>
+
+<span class="c1">// Alternatively, specify height and width will be automatic 2:1 ratio</span>
+<span class="kd">const</span> <span class="nx">flagDetails2</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="dl">'</span><span class="s1">fr</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">height</span><span class="p">:</span> <span class="mi">100</span> <span class="p">});</span>
+
+<span class="c1">// Get flag emoji</span>
+<span class="kd">const</span> <span class="nx">emoji</span> <span class="o">=</span> <span class="nx">CountryFlags</span><span class="p">.</span><span class="nf">getFlagEmoji</span><span class="p">(</span><span class="dl">'</span><span class="s1">jp</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Returns 🇯🇵</span>
+</code></pre></div></div>
+
+<h2 id="reference">Reference</h2>
+
+<h3 id="class-countryflags">Class: CountryFlags</h3>
+
+<h4 id="instance-methods">Instance Methods</h4>
+
+<h5 id="getflagurlcountrycode-string-string--null"><code class="language-plaintext highlighter-rouge">getFlagUrl(countryCode: string): string | null</code></h5>
+<p>Returns the URL for a country’s flag SVG.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">countryCode</code>: Two-letter country code (ISO 3166-1 alpha-2)</li>
+  <li>Returns: URL string or null if not found</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagUrl</span><span class="p">(</span><span class="dl">'</span><span class="s1">gb</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="async-getflagcountrycode-string-options-object-promiseobject--null"><code class="language-plaintext highlighter-rouge">async getFlag(countryCode: string, options?: Object): Promise&lt;Object | null&gt;</code></h5>
+<p>Get detailed flag information with optional sizing.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">countryCode</code>: Two-letter country code</li>
+  <li><code class="language-plaintext highlighter-rouge">options</code>: Optional configuration object
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">width</code>: Desired width in pixels (height will be automatically set to maintain 2:1 ratio)</li>
+      <li><code class="language-plaintext highlighter-rouge">height</code>: Desired height in pixels (width will be automatically set to maintain 2:1 ratio)</li>
+    </ul>
+  </li>
+  <li>Returns: Object containing flag details or null if not found</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Width specified - height will be half of width</span>
+<span class="kd">const</span> <span class="nx">flag</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="dl">'</span><span class="s1">de</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">width</span><span class="p">:</span> <span class="mi">300</span> <span class="p">});</span>
+
+<span class="c1">// Height specified - width will be double the height</span>
+<span class="kd">const</span> <span class="nx">flag2</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="dl">'</span><span class="s1">de</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">height</span><span class="p">:</span> <span class="mi">150</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<h5 id="async-getflagelementcountrycode-string-promisesvgelement--null"><code class="language-plaintext highlighter-rouge">async getFlagElement(countryCode: string): Promise&lt;SVGElement | null&gt;</code></h5>
+<p>Get the SVG DOM element for a country flag.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">countryCode</code>: Two-letter country code</li>
+  <li>Returns: SVG element or null if not found</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">svgElement</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">it</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="getallcountrycodes-string"><code class="language-plaintext highlighter-rouge">getAllCountryCodes(): string[]</code></h5>
+<p>Get an array of all available country codes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">codes</span> <span class="o">=</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getAllCountryCodes</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h5 id="async-getallflags-promisearray"><code class="language-plaintext highlighter-rouge">async getAllFlags(): Promise&lt;Array&gt;</code></h5>
+<p>Get all available flags with their details.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">allFlags</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getAllFlags</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h5 id="async-searchflagsquery-string-promisearray"><code class="language-plaintext highlighter-rouge">async searchFlags(query: string): Promise&lt;Array&gt;</code></h5>
+<p>Search for flags by country code or name.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">query</code>: Search string</li>
+  <li>Returns: Array of matching flag objects</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">searchFlags</span><span class="p">(</span><span class="dl">'</span><span class="s1">united</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="static-methods">Static Methods</h4>
+
+<h5 id="static-getflagemojicountrycode-string-string--null"><code class="language-plaintext highlighter-rouge">static getFlagEmoji(countryCode: string): string | null</code></h5>
+<p>Get the flag emoji for a country code.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">countryCode</code>: Two-letter country code</li>
+  <li>Returns: Flag emoji or null if not found</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">emoji</span> <span class="o">=</span> <span class="nx">CountryFlags</span><span class="p">.</span><span class="nf">getFlagEmoji</span><span class="p">(</span><span class="dl">'</span><span class="s1">au</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="static-validatecountrycodecode-string-boolean"><code class="language-plaintext highlighter-rouge">static validateCountryCode(code: string): boolean</code></h5>
+<p>Validate a country code.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">code</code>: Two-letter country code to validate</li>
+  <li>Returns: Boolean indicating validity</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">isValid</span> <span class="o">=</span> <span class="nx">CountryFlags</span><span class="p">.</span><span class="nf">validateCountryCode</span><span class="p">(</span><span class="dl">'</span><span class="s1">us</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="framework-integration">Framework Integration</h2>
+
+<h3 id="react-integration">React Integration</h3>
+
+<h4 id="basic-component-example">Basic Component Example</h4>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">CountryFlag</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">countryCode</span><span class="p">,</span> <span class="nx">width</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">flagSvg</span><span class="p">,</span> <span class="nx">setFlagSvg</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">flags</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountryFlags</span><span class="p">();</span>
+
+  <span class="nf">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">async</span> <span class="kd">function</span> <span class="nf">loadFlag</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">flag</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="nx">countryCode</span><span class="p">,</span> <span class="p">{</span> <span class="nx">width</span> <span class="p">});</span>
+      <span class="k">if </span><span class="p">(</span><span class="nx">flag</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">setFlagSvg</span><span class="p">(</span><span class="nx">flag</span><span class="p">.</span><span class="nx">svg</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nf">loadFlag</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">countryCode</span><span class="p">,</span> <span class="nx">width</span><span class="p">]);</span>
+
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">dangerouslySetInnerHTML</span><span class="p">=</span> <span class="p">/&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Usage</span>
+<span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">CountryFlag</span> <span class="na">countryCode</span><span class="p">=</span><span class="s">"us"</span> <span class="na">width</span><span class="p">=</span><span class="si">{</span><span class="mi">200</span><span class="si">}</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="flag-search-component">Flag Search Component</h4>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">FlagSearch</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">query</span><span class="p">,</span> <span class="nx">setQuery</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">results</span><span class="p">,</span> <span class="nx">setResults</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">([]);</span>
+  <span class="kd">const</span> <span class="nx">flags</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountryFlags</span><span class="p">();</span>
+
+  <span class="kd">const</span> <span class="nx">handleSearch</span> <span class="o">=</span> <span class="k">async </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">searchQuery</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+    <span class="nf">setQuery</span><span class="p">(</span><span class="nx">searchQuery</span><span class="p">);</span>
+    
+    <span class="k">if </span><span class="p">(</span><span class="nx">searchQuery</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">searchFlags</span><span class="p">(</span><span class="nx">searchQuery</span><span class="p">);</span>
+      <span class="nf">setResults</span><span class="p">(</span><span class="nx">searchResults</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nf">setResults</span><span class="p">([]);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="k">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">type</span><span class="p">=</span><span class="s">"text"</span>
+        <span class="na">value</span><span class="p">=</span><span class="si">{</span><span class="nx">query</span><span class="si">}</span>
+        <span class="na">onChange</span><span class="p">=</span><span class="si">{</span><span class="nx">handleSearch</span><span class="si">}</span>
+        <span class="na">placeholder</span><span class="p">=</span><span class="s">"Search for a country..."</span>
+      <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"results"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">results</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">flag</span> <span class="o">=&gt;</span> <span class="p">(</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">flag</span><span class="p">.</span><span class="nx">code</span><span class="si">}</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">dangerouslySetInnerHTML</span><span class="p">=</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">flag</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">))</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="vue-integration">Vue Integration</h3>
+
+<h4 id="basic-component-example-1">Basic Component Example</h4>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">v-html=</span><span class="s">"flagSvg"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">CountryFlag</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">props</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">countryCode</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">required</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="na">width</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">type</span><span class="p">:</span> <span class="nb">Number</span><span class="p">,</span>
+      <span class="na">default</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nf">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">flagSvg</span><span class="p">:</span> <span class="dl">''</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="k">async</span> <span class="nf">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">flags</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountryFlags</span><span class="p">();</span>
+    <span class="kd">const</span> <span class="nx">flag</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flags</span><span class="p">.</span><span class="nf">getFlag</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">countryCode</span><span class="p">,</span> <span class="p">{</span>
+      <span class="na">width</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span>
+    <span class="p">});</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">flag</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">flagSvg</span> <span class="o">=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">svg</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h4 id="flag-gallery-component">Flag Gallery Component</h4>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flag-gallery"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">v-for=</span><span class="s">"flag in flags"</span> <span class="na">:key=</span><span class="s">"flag.code"</span> <span class="na">class=</span><span class="s">"flag-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">v-html=</span><span class="s">"flag.svg"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">FlagGallery</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nf">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">flags</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="k">async</span> <span class="nf">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">flagsInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountryFlags</span><span class="p">();</span>
+    <span class="kd">const</span> <span class="nx">flags</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">flagsInstance</span><span class="p">.</span><span class="nf">getAllFlags</span><span class="p">();</span>
+    <span class="c1">// Set width for all flags</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">flags</span> <span class="o">=</span> <span class="nx">flags</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">flag</span> <span class="o">=&gt;</span> <span class="p">({</span>
+      <span class="p">...</span><span class="nx">flag</span><span class="p">,</span>
+      <span class="na">svg</span><span class="p">:</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;svg</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">&lt;svg width="200"</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}));</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">style</span> <span class="na">scoped</span><span class="nt">&gt;</span>
+<span class="nc">.flag-gallery</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="nb">repeat</span><span class="p">(</span><span class="n">auto-fill</span><span class="p">,</span> <span class="n">minmax</span><span class="p">(</span><span class="m">200px</span><span class="p">,</span> <span class="m">1</span><span class="n">fr</span><span class="p">));</span>
+  <span class="py">gap</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.flag-item</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="browser-support">Browser Support</h2>
+
+<p>The package works in all modern browsers that support SVG and the Fetch API. For older browsers, you may need to include polyfills for:</p>
+<ul>
+  <li>Fetch API</li>
+  <li>Promise</li>
+  <li>SVG support</li>
+</ul>
+
+<h2 id="typescript-support">TypeScript Support</h2>
+
+<p>The package includes TypeScript type definitions. You can import types as follows:</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">CountryFlags</span><span class="p">,</span> <span class="nx">FlagOptions</span><span class="p">,</span> <span class="nx">FlagDetails</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">svg-country-flags-2x1</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="common-issues">Common Issues</h3>
+
+<ol>
+  <li><strong>Flag Not Loading</strong>
+    <ul>
+      <li>Ensure the country code is valid (use <code class="language-plaintext highlighter-rouge">validateCountryCode</code>)</li>
+      <li>Check network connectivity</li>
+      <li>Verify SVG support in your environment</li>
+    </ul>
+  </li>
+  <li><strong>Invalid Country Code</strong>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Good</span>
+<span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagUrl</span><span class="p">(</span><span class="dl">'</span><span class="s1">us</span><span class="dl">'</span><span class="p">);</span>
+   
+<span class="c1">// Bad</span>
+<span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagUrl</span><span class="p">(</span><span class="dl">'</span><span class="s1">USA</span><span class="dl">'</span><span class="p">);</span>  <span class="c1">// Wrong format</span>
+<span class="nx">flags</span><span class="p">.</span><span class="nf">getFlagUrl</span><span class="p">(</span><span class="dl">''</span><span class="p">);</span>     <span class="c1">// Empty string</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>SVG Rendering Issues</strong>
+    <ul>
+      <li>Ensure proper sanitization when using <code class="language-plaintext highlighter-rouge">dangerouslySetInnerHTML</code> in React</li>
+      <li>Check if your bundler is properly handling SVG files</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ol>
+  <li>Always validate country codes before use</li>
+  <li>Handle null returns from API methods</li>
+  <li>Implement error boundaries in React</li>
+  <li>Use appropriate width for flags (height will be automatic)</li>
+  <li>Cache results when making multiple calls</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>MIT License</p>

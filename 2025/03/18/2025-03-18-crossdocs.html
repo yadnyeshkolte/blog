@@ -1,0 +1,193 @@
+<h5 id="android">Android</h5>
+<p><img src="https://github.com/yadnyeshkolte/CrossDocs/blob/main/resources/android%20app%20screens.png?raw=true" alt="Smartphone Screen" /></p>
+
+<h5 id="desktop">Desktop</h5>
+<p><img src="https://github.com/yadnyeshkolte/CrossDocs/blob/main/resources/desktop%20screen.png?raw=true" alt="Desktop Screen" /></p>
+
+<h4 id="desktop-recording">Desktop Recording</h4>
+
+<p><a href="https://github.com/user-attachments/assets/493a54af-261a-4e38-abb4-6bad599bf94f">Desktop.webm</a></p>
+
+<h4 id="android-recording">Android Recording</h4>
+
+<p><a href="https://github.com/user-attachments/assets/f940446b-8e59-4ef0-aeb7-bd87c160c9a3">Android.mp4</a></p>
+
+<hr />
+
+<h2 id="-download--installation">📥 Download &amp; Installation</h2>
+
+<h3 id="available-packages">Available Packages</h3>
+
+<p>🖥️ <strong>Desktop Applications</strong>:</p>
+<ul>
+  <li><strong>Windows</strong>: <a href="https://github.com/yadnyeshkolte/CrossDocs/releases/download/v1.0.0/CrossDocs-1.0.0.msi"><code class="language-plaintext highlighter-rouge">CrossDocs-1.0.0.msi</code></a> (58.21 MB)</li>
+  <li><strong>macOS</strong>: <a href="https://github.com/yadnyeshkolte/CrossDocs/releases/download/v1.0.0/CrossDocs-1.0.0.dmg"><code class="language-plaintext highlighter-rouge">CrossDocs-1.0.0.dmg</code></a> (59.86 MB)</li>
+  <li><strong>Linux</strong>:
+    <ul>
+      <li>Debian/Ubuntu: <a href="https://github.com/yadnyeshkolte/CrossDocs/releases/download/v1.0.0/CrossDocs_1.0.0_amd64.deb"><code class="language-plaintext highlighter-rouge">CrossDocs_1.0.0_amd64.deb</code></a> (52.51 MB)</li>
+      <li>Universal Linux: <a href="https://github.com/yadnyeshkolte/CrossDocs/releases/download/v1.0.0/CrossDocs-1.0.0-x86_64.AppImage"><code class="language-plaintext highlighter-rouge">CrossDocs-1.0.0-x86_64.AppImage</code></a> (62.72 MB)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>📱 <strong>Mobile</strong>:</p>
+<ul>
+  <li><strong>Android</strong>: <a href="https://github.com/yadnyeshkolte/CrossDocs/releases/download/v1.0.0/CrossDocs.apk"><code class="language-plaintext highlighter-rouge">CrossDocs.apk</code></a> (9.40 MB)</li>
+</ul>
+
+<h3 id="️-system-requirements">⚠️ System Requirements</h3>
+
+<p><strong>Desktop Applications (Windows, macOS, Linux)</strong>:</p>
+<ul>
+  <li>JDK 23.0.1 or later is required</li>
+  <li>100 MB of free disk space</li>
+</ul>
+
+<p><strong>Android</strong>:</p>
+<ul>
+  <li>Android 5.0 (API level 21) or higher</li>
+  <li>No additional setup required</li>
+</ul>
+
+<h3 id="installation-instructions">Installation Instructions</h3>
+
+<ol>
+  <li><strong>Android</strong>:
+    <ul>
+      <li>Download the APK file</li>
+      <li>Allow installation from unknown sources in your device settings</li>
+      <li>Open the downloaded APK to install</li>
+    </ul>
+  </li>
+  <li><strong>Windows</strong>:
+    <ul>
+      <li>Ensure JDK 23.0.1 is installed</li>
+      <li>Download the <code class="language-plaintext highlighter-rouge">.msi</code> file</li>
+      <li>Double-click to run the installer</li>
+      <li>Follow the installation wizard</li>
+    </ul>
+  </li>
+  <li><strong>macOS</strong>:
+    <ul>
+      <li>Ensure JDK 23.0.1 is installed</li>
+      <li>Download the <code class="language-plaintext highlighter-rouge">.dmg</code> file</li>
+      <li>Open the DMG file</li>
+      <li>Drag CrossDocs to Applications folder</li>
+    </ul>
+  </li>
+  <li><strong>Linux</strong>:
+    <ul>
+      <li>Ensure JDK 23.0.1 is installed</li>
+    </ul>
+
+    <p>For Debian/Ubuntu:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dpkg <span class="nt">-i</span> CrossDocs_1.0.0_amd64.deb
+</code></pre></div>    </div>
+
+    <p>For AppImage:</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x CrossDocs-1.0.0-x86_64.AppImage
+./CrossDocs-1.0.0-x86_64.AppImage
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="-libraries-and-dependencies">📚 Libraries and Dependencies</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Library</th>
+      <th>Version</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Core</strong></td>
+      <td>Kotlin</td>
+      <td>1.9.0</td>
+      <td>Programming Language</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Compose Multiplatform</td>
+      <td>1.5.1</td>
+      <td>UI Framework</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Kotlin Coroutines</td>
+      <td>1.7.3</td>
+      <td>Asynchronous Programming</td>
+    </tr>
+    <tr>
+      <td><strong>Markdown Processing</strong></td>
+      <td>JetBrains Markdown</td>
+      <td>0.3.5</td>
+      <td>Markdown Parsing</td>
+    </tr>
+    <tr>
+      <td><strong>Networking</strong></td>
+      <td>Ktor Client</td>
+      <td>2.3.7</td>
+      <td>HTTP Client</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ktor Client CIO</td>
+      <td>2.3.7</td>
+      <td>Ktor Engine</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ktor Client Content Negotiation</td>
+      <td>2.3.7</td>
+      <td>Content Negotiation</td>
+    </tr>
+    <tr>
+      <td><strong>Serialization</strong></td>
+      <td>Kotlinx Serialization</td>
+      <td>1.6.0</td>
+      <td>JSON Serialization</td>
+    </tr>
+    <tr>
+      <td><strong>Logging</strong></td>
+      <td>SLF4J Simple</td>
+      <td>2.0.9</td>
+      <td>Logging Framework</td>
+    </tr>
+    <tr>
+      <td><strong>Android Specific</strong></td>
+      <td>AndroidX Activity Compose</td>
+      <td>Latest</td>
+      <td>Android Integration</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>AndroidX Lifecycle ViewModel</td>
+      <td>Latest</td>
+      <td>ViewModel Support</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>AndroidX Lifecycle Runtime</td>
+      <td>Latest</td>
+      <td>Lifecycle Management</td>
+    </tr>
+    <tr>
+      <td><strong>Desktop Specific</strong></td>
+      <td>Kotlinx Coroutines Swing</td>
+      <td>Latest</td>
+      <td>Desktop Threading</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-license">📃 License</h2>
+
+<p>This project is licensed under the Apache License 2.0 - see the <a href="LICENSE">LICENSE</a> file for details.</p>

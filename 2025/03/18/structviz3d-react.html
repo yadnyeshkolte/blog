@@ -1,0 +1,154 @@
+<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          layout: post
+          title: "StructViz3D React Component"
+          date: 2025-03-14
+          repository: "yadnyeshkolte/structviz3d-react"
+          description: "React component for 3D structure visualization"
+          original_file: "README.md"
+          permalink: /structviz3d-react/
+          ---
+          # StructViz3D
+</code></pre></div></div>
+
+<h2 id="3d-structural-engineering-model-viewer">3D Structural Engineering Model Viewer</h2>
+
+<p>StructViz3D is a web-based application for visualizing and interacting with 3D structural engineering models. It provides engineers, architects, and designers with a powerful tool to view, analyze, and manipulate STL and GLTF files directly in the browser.</p>
+
+<p>https://youtu.be/8gEaS0dXfAg</p>
+
+<p><img src="https://github.com/user-attachments/assets/6f509d6e-e994-4cdc-a0e9-497cc2f34722" alt="StructViz3D Screenshot" /></p>
+
+<h2 id="-features">🔍 Features</h2>
+
+<ul>
+  <li><strong>High-Performance 3D Rendering</strong>: Built on Three.js for smooth, hardware-accelerated 3D visualization</li>
+  <li><strong>Multiple File Format Support</strong>: Load and visualize STL and GLTF/GLB files</li>
+  <li><strong>Advanced Camera Controls</strong>:
+    <ul>
+      <li>Orthographic and perspective camera modes</li>
+      <li>Zoom, pan, and orbit functionality</li>
+      <li>Precise model focusing</li>
+    </ul>
+  </li>
+  <li><strong>Comprehensive Viewing Options</strong>:
+    <ul>
+      <li>Customizable model colors</li>
+      <li>Wireframe visualization mode</li>
+      <li>Enhanced pencil-sketch rendering</li>
+      <li>Multiple grid planes (XZ, XY, YZ) with customizable colors and divisions</li>
+    </ul>
+  </li>
+  <li><strong>Flexible Lighting System</strong>: Adjust lighting to enhance model visibility and detail</li>
+  <li><strong>Model Orientation Controls</strong>: Easily reset and adjust model orientation</li>
+  <li><strong>Fullscreen Mode</strong>: Maximize your workspace for detailed inspection</li>
+  <li><strong>Keyboard Shortcuts</strong>: Streamline your workflow with convenient shortcuts</li>
+  <li><strong>Responsive Design</strong>: Works on desktop and mobile devices</li>
+  <li><strong>Drag Mode</strong>: Toggle between rotation and pan modes for intuitive model manipulation</li>
+</ul>
+
+<h2 id="-live-demo">💻 Live Demo</h2>
+
+<p>Visit the live application: <a href="https://yadnyeshkolte.github.io/structviz3d-react/">https://yadnyeshkolte.github.io/structviz3d-react/</a></p>
+
+<h2 id="️-architecture">🏗️ Architecture</h2>
+
+<p>StructViz3D consists of two main components:</p>
+
+<ol>
+  <li><strong>Frontend</strong>: React-based web application with Three.js for 3D rendering</li>
+  <li><strong>Backend API</strong>: Python-based service for file processing and model optimization</li>
+</ol>
+
+<p>The frontend is deployed on GitHub Pages, while the backend API is hosted on Render.com.</p>
+
+<h2 id="-getting-started">🚀 Getting Started</h2>
+
+<h3 id="using-the-live-application">Using the Live Application</h3>
+
+<ol>
+  <li>Visit <a href="https://yadnyeshkolte.github.io/structviz3d-react/">https://yadnyeshkolte.github.io/structviz3d-react/</a></li>
+  <li>Choose “Try Sample Model” to explore the application with a pre-loaded model</li>
+  <li>Or select “Upload Your Model” to visualize your own STL or GLTF/GLB files</li>
+</ol>
+
+<h3 id="running-locally">Running Locally</h3>
+
+<h4 id="prerequisites">Prerequisites</h4>
+
+<ul>
+  <li>Node.js (v14 or higher)</li>
+  <li>npm or yarn</li>
+</ul>
+
+<h4 id="installation">Installation</h4>
+
+<ol>
+  <li>Clone the repository:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/yourusername/structviz3d.git
+<span class="nb">cd </span>structviz3d
+</code></pre></div>    </div>
+  </li>
+  <li>Install dependencies:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span>
+<span class="c"># or</span>
+yarn <span class="nb">install</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Start the development server:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm start
+<span class="c"># or</span>
+yarn start
+</code></pre></div>    </div>
+  </li>
+  <li>Open your browser and navigate to <code class="language-plaintext highlighter-rouge">http://localhost:3000</code></li>
+</ol>
+
+<h2 id="-api-configuration">🔧 API Configuration</h2>
+
+<p>By default, the application connects to the backend API deployed on Render.com. To use a different API endpoint:</p>
+
+<ol>
+  <li>Create a <code class="language-plaintext highlighter-rouge">.env</code> file in the project root directory</li>
+  <li>Add the following line:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VITE_APP_API_URL=https://your-api-endpoint.com
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="-usage-guide">📚 Usage Guide</h2>
+
+<h3 id="basic-controls">Basic Controls</h3>
+
+<ul>
+  <li><strong>Left Mouse Button</strong>: Rotate model (default) or pan (in drag mode)</li>
+  <li><strong>Right Mouse Button</strong>: Pan the camera</li>
+  <li><strong>Mouse Wheel</strong>: Zoom in/out</li>
+  <li><strong>Double Click</strong>: Focus on a specific part of the model</li>
+</ul>
+
+<h3 id="viewer-controls">Viewer Controls</h3>
+
+<ul>
+  <li><strong>Color Selector</strong>: Change the model’s color</li>
+  <li><strong>Camera Controls</strong>: Switch between perspective and orthographic views</li>
+  <li><strong>View Controls</strong>: Set standard views (top, front, side, etc.)</li>
+  <li><strong>Grid Controls</strong>: Toggle and customize grid planes</li>
+  <li><strong>Orientation Controls</strong>: Reset and adjust model orientation</li>
+  <li><strong>Wireframe Controls</strong>: Toggle wireframe visualization modes</li>
+  <li><strong>Lighting Controls</strong>: Adjust scene lighting</li>
+</ul>
+
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+
+<ul>
+  <li>Press keyboard button to view all available keyboard shortcuts</li>
+</ul>
+
+<h2 id="-api-repository">👨‍💻 API Repository</h2>
+
+<p>The backend API code is available in a separate repository:
+<a href="https://github.com/yadnyeshkolte/structviz3d-api">https://github.com/yourusername/structviz3d-api</a></p>
+
+<h2 id="-license">📄 License</h2>
+
+<p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
