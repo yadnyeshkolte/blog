@@ -45,6 +45,10 @@ plugins:
 # Category settings
 category_dir: categories
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # Exclude from processing
 exclude:
   - Gemfile

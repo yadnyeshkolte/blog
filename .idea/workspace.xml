@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69fd6323-8a65-4e63-9f2e-19d34156df46" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2025-03-17-welcome-to-jekyll.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/theme/_post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/theme/_post.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <updated>1742229592278</updated>
       <workItem from="1742229594367" duration="17000" />
       <workItem from="1742229620161" duration="2152000" />
-      <workItem from="1742363657627" duration="9740000" />
+      <workItem from="1742363657627" duration="10399000" />
     </task>
     <servers />
   </component>
