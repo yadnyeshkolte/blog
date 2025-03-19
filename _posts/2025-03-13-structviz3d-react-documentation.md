@@ -1,11 +1,21 @@
 ---
-title: struc-cumentation
-date: 2022-12-12 12:00:00 -500
-categories: [documentation,new]
-tags: [structviz3d,documentation,architecture,components,features,implementation]
+title: StructViz3D Documentation
+date: 2025-03-13 17:00:00  +0530
+categories:
+  - documentation
+  - structviz3d
+tags:
+  - structviz3d
+  - documentation
+  - architecture
+  - components
+  - features
+  - implementation
+  - docs
 ---
 
 # StructViz3D Documentation
+
 
 ## Introduction
 
