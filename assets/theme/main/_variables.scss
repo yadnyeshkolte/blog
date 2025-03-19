@@ -1,0 +1,38 @@
+// Colors
+$default-color: #555;
+$default-shade: #353535;
+$default-tint: #aaa;
+$grey-1: #979797;
+$grey-2: #e5e5e5;
+$grey-3: #f9f9f9;
+$white: #fff;
+$blue: #4a9ae1;
+$shadow-color: rgba(0, 0, 0, .2);
+$point-color: #2dc84d;
+
+$post-title-color: #353535;
+$post-subtitle-color: #888;
+$tag-bg-color: #eee;
+$tag-text-color: #999;
+
+:root {
+  --point-color: #2dc84d;
+}
+
+// Fonts
+$serif: 'Roboto Slab', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+$sans-serif: 'Noto Sans KR', 'Noto Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$monospaced: Hack, Menlo, Monaco, monospace;
+$title-font: 'Nunito Sans', 'Noto Sans KR', 'Noto Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}

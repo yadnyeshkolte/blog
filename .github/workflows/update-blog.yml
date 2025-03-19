@@ -1,0 +1,115 @@
+name: Update Blog from Multiple Repositories
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+  schedule:
+    - cron: '0 */12 * * *'  # Runs twice daily
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout blog repository
+        uses: actions/checkout@v3
+
+      - name: Install Ruby using apt-get
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full ruby-bundler
+          ruby --version
+          bundler --version
+
+      - name: Install dependencies
+        run: |
+          sudo bundle install
+
+      - name: Install YAML processor
+        run: |
+          pip install pyyaml
+
+      - name: Fetch content from repositories
+        run: |
+          mkdir -p _posts
+          python3 <<EOF
+          import yaml
+          import os
+          import re
+          from datetime import datetime
+          import urllib.request
+          import json
+          
+          # Load repository configuration
+          with open('_data/repositories.yml', 'r') as file:
+              config = yaml.safe_load(file)
+          
+          # Get repositories list
+          repositories = config.get('repositories', [])
+          
+          for repo in repositories:
+              repo_name = repo['repo']
+              file_path = repo['file']
+              title = repo['title']
+              description = repo.get('description', '')
+              
+              # Generate a safe filename
+              safe_name = re.sub(r'[^a-zA-Z0-9]', '-', repo['name'].lower())
+              today = datetime.now().strftime('%Y-%m-%d')
+              post_filename = f"_posts/{today}-{safe_name}.md"
+              
+              # Get latest commit date for the file
+              api_url = f"https://api.github.com/repos/{repo_name}/commits?path={file_path}&per_page=1"
+              req = urllib.request.Request(api_url)
+              req.add_header('User-Agent', 'GitHub-Actions-Bot')
+              try:
+                  with urllib.request.urlopen(req) as response:
+                      commit_data = json.loads(response.read().decode())
+                      if commit_data:
+                          commit_date = commit_data[0]['commit']['committer']['date'][:10]  # YYYY-MM-DD
+                      else:
+                          commit_date = today
+              except Exception as e:
+                  print(f"Error getting commit date for {repo_name}/{file_path}: {e}")
+                  commit_date = today
+              
+              # Fetch file content
+              raw_url = f"https://raw.githubusercontent.com/{repo_name}/main/{file_path}"
+              try:
+                  with urllib.request.urlopen(raw_url) as response:
+                      content = response.read().decode('utf-8')
+                      
+                      # Create Jekyll front matter
+                      front_matter = f"""---
+                        layout: post
+                        title: "{title}"
+                        date: {commit_date}
+                        repository: "{repo_name}"
+                        description: "{description}"
+                        original_file: "{file_path}"
+                        permalink: /{safe_name}/
+                        ---
+                        """
+                      
+                      # Write content to file with front matter
+                      with open(post_filename, 'w') as post_file:
+                          post_file.write(front_matter + content)
+                      
+                      print(f"Successfully processed {repo_name}/{file_path} -> {post_filename}")
+              except Exception as e:
+                  print(f"Error processing {repo_name}/{file_path}: {e}")
+          EOF
+  
+      - name: Update dependencies
+        run: |
+          sudo bundle update listen
+
+      - name: Build Jekyll site
+        run: |
+          sudo bundle install
+          sudo bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages

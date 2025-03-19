@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69fd6323-8a65-4e63-9f2e-19d34156df46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/jekyll.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/update-blog.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/catalogue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/category_items.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/tag_items.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pages/about.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pages/categories.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pages/posts.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pages/search.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_pages/tags.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2023-03-19-hello-world.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/etc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_catalogue.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_category.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_common.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/_tag.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_error.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_syntax.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/theme/main/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/etc.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/simple-jekyll-search.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/utils/copy-email-to-clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/utils/scroll-to-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/json/search-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_catalogue.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_category.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_common.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/_tag.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_error.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_syntax.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/theme/main/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yadnyeshkolte&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yadnyeshkolte/blog.git&quot;,
+    &quot;accountId&quot;: &quot;f17e75b7-eac2-4969-a171-419065148709&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2uS6Nu0TQmYwparUYqAqI551hBp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging develop",
+    "last_opened_file_path": "/home/yadnyeshserve/Zed-Projects/blog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-RM-243.26053.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69fd6323-8a65-4e63-9f2e-19d34156df46" name="Changes" comment="" />
+      <created>1742229592278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742229592278</updated>
+      <workItem from="1742229594367" duration="17000" />
+      <workItem from="1742229620161" duration="2152000" />
+      <workItem from="1742363657627" duration="10895000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

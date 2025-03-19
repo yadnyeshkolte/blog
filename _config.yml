@@ -1,0 +1,61 @@
+title: Developer Blog
+description: A Developer's Journal
+author:
+  name: Yadnyesh
+  email: yadnyeshkolte@gmail.com
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://yadnyeshkolte.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: yadnyeshkolte
+github_username:  yadnyeshkolte
+
+# Build settings
+markdown: kramdown
+permalink: /posts/:year/:month/:day/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Default front matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Category settings
+category_dir: categories
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _site
+  - _README.md
+  - Rakefile
+  - LICENSE

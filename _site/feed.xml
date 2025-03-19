@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2025-03-19T14:56:28+05:30</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Developer Blog</title><subtitle>A Developer&apos;s Journal</subtitle><author><name>Yadnyesh</name><email>yadnyeshkolte@gmail.com</email></author><entry><title type="html">Hello World - First Post</title><link href="http://localhost:4000/blog/posts/2023/03/19/hello-world/" rel="alternate" type="text/html" title="Hello World - First Post" /><published>2023-03-19T22:30:00+05:30</published><updated>2023-03-19T22:30:00+05:30</updated><id>http://localhost:4000/blog/posts/2023/03/19/hello-world</id><content type="html" xml:base="http://localhost:4000/blog/posts/2023/03/19/hello-world/"><![CDATA[<p>This is my first blog post using Jekyll. Welcome to my site!</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Jekyll is a static site generator that makes blogging easy and efficient. Here’s how to get started:</p>
+
+<ol>
+  <li>Install Jekyll and Ruby</li>
+  <li>Create a new Jekyll site</li>
+  <li>Customize it to your liking</li>
+  <li>Deploy to GitHub Pages</li>
+</ol>
+
+<h2 id="code-example">Code Example</h2>
+
+<p>Here’s a simple code example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hello_world</span>
+  <span class="nb">puts</span> <span class="s2">"Hello, World!"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>I hope you enjoy reading my blog!</p>]]></content><author><name>Yadnyesh</name></author><category term="etc" /><category term="blog" /><category term="jekyll" /><category term="blogging" /><summary type="html"><![CDATA[This is my first blog post using Jekyll. Welcome to my site!]]></summary></entry></feed>

@@ -1,0 +1,164 @@
+body > div {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 7.5rem;
+}
+
+main,
+.nav-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  width: calc(100% - 2.5rem);
+}
+
+.nav {
+  box-shadow: 0 2px 2px -2px $shadow-color;
+  background-color: white;
+  overflow: auto;
+  top: 0;
+  position: static;
+  z-index: 1;
+
+  &-container {
+    margin: 1rem auto;
+    position: relative;
+    text-align: center;
+  }
+
+  &-title {
+    @include transition(all .2s ease-out);
+    color: $default-color;
+    font-family: $title-font;
+    display: inline-block;
+    height: 2rem;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+    }
+
+    span {
+      color: $point-color;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    @include transition(all .2s ease-out);
+    color: $default-color;
+    display: inline-block;
+    opacity: .6;
+    margin: 0 1rem;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &.selected {
+      opacity: 1;
+    }
+  }
+
+  a {
+    color: $default-color;
+
+    &.menu {
+      i.fa-robot {
+        margin-left: -.1rem;
+        margin-right: .1rem;
+      }
+
+      span {
+        margin-left: .2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 801px) {
+  .nav {
+    position: sticky;
+
+    &-container {
+      text-align: left;
+    }
+
+    ul {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    .menu {
+      i {
+        font-size: 1.2rem;
+
+        &.fa-robot {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+footer {
+  cursor: default;
+  border-top: 1px solid $grey-2;
+  border-bottom: 1px solid $grey-2;
+  background-color: $grey-3;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem 0 2rem;
+
+  span {
+    color: $default-color;
+    font-size: .8rem;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: .8rem;
+  }
+
+  i {
+    @include transition(all .2s ease-out);
+    color: $default-color;
+    font-size: 1.5rem;
+
+    @media (min-width: 600px) {
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  .mailto-wrapper {
+    margin-right: .1rem;
+  }
+}
