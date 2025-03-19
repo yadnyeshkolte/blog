@@ -5,7 +5,7 @@ lang: en
 
 timezone: Asia/Kolkata
 
-title: Yadnyesh Blog # the main title
+title: Y-K Blog # the main title
 
 tagline: A Developer's Journal
 
@@ -24,6 +24,7 @@ social:
   name: Yadnyesh Kolte
   email: yadnyeshkolte@gmail.com
   links:
+    - https://yadnyeshkolte.github.io
     - https://twitter.com/yadnyeshkolte
     - https://github.com/yadnyeshkolte
     -
