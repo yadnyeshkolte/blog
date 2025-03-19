@@ -2,8 +2,8 @@
 title: StructViz3D Documentation
 date: 2025-03-13 17:00:00  +0530
 categories:
-  - documentation
-  - structviz3d
+  - JavaScript
+  - Documentation
 tags:
   - structviz3d
   - documentation
