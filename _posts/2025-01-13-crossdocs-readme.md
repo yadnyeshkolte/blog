@@ -17,6 +17,8 @@ tags:
   - markdown-editor
   - compose-multi-platform
   - shell
+youtubeId: k6Qi45DaH94
+youtubeId1:  u0lAmWlk2EA
 ---
 # CrossDocs 
 
@@ -75,11 +77,11 @@ What makes CrossDocs special is an understanding of how modern development flows
 
 #### Desktop Recording
 
-[Desktop.webm](https://github.com/user-attachments/assets/493a54af-261a-4e38-abb4-6bad599bf94f)
+{% include youtubePlayer.html id=page.youtubeId %}
 
 #### Android Recording
 
-[Android.mp4](https://github.com/user-attachments/assets/f940446b-8e59-4ef0-aeb7-bd87c160c9a3)
+{% include youtubePlayer.html id=page.youtubeId1 %}
 
 ---
 

@@ -13,10 +13,13 @@ tags:
   - features
   - implementation
   - docs
+youtubeId: 8gEaS0dXfAg
 ---
 # StructViz3D
 
 [Watch this video on YouTube](https://youtu.be/8gEaS0dXfAg)
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 ## Overview
 
