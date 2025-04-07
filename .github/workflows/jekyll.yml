@@ -39,7 +39,7 @@ jobs:
         with:
           ruby-version: '3.2.3' # Not needed with a .ruby-version file
       - name: Update Bundler
-        run: gem install bundler:latest
+        run: bundle update --bundler
       - name: Bundle Install
         run: bundle install
       - name: Setup Pages
