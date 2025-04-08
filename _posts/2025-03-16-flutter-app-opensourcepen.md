@@ -1,16 +1,17 @@
 ---
-title: "google: error getting credentials using GOOGLE_APPLICATION_CREDENTIALS environment variable: open ~/root/project-123456-a1b2c3d4e5f6.json: no such file or directory"
-date: 2025-02-03 17:00:00  +0530
+title: Flutter Prototype E-Commerce App
+date: 2025-03-16 17:00:00  +0530
 categories:
-  - Shell
-  - Error
+  - Dart
+  - Application
+  - Docs
 tags:
-  - terraform
-  - google
-  - google-cloud
-  - auth
-  - error
-  - resolve
+  - dart
+  - flutter
+  - android
+  - application
+  - prototype
+  - readme
 youtubeId: SDRGURhM56Y
 ---
 # Flutter Prototype E-Commerce App
@@ -18,6 +19,9 @@ youtubeId: SDRGURhM56Y
 A cross-platform e-commerce application built with Flutter using the MVVM (Model-View-ViewModel) architecture pattern. This project demonstrates best practices for state management, navigation, data persistence, and interactive user experiences in Flutter.
 
 {% include youtubePlayer.html id=page.youtubeId %}
+
+You can find the project releases in the GitLab CI/CD Builds.
+[![GitLab](https://img.shields.io/badge/-GitLab-000?&logo=GitLab)](https://gitlab.com/yadnyeshkolte/opensourcepen)
 
 ## 📱 Project Overview
 
