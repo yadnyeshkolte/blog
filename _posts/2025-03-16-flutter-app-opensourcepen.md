@@ -11,10 +11,13 @@ tags:
   - auth
   - error
   - resolve
+youtubeId: SDRGURhM56Y
 ---
 # Flutter Prototype E-Commerce App
 
 A cross-platform e-commerce application built with Flutter using the MVVM (Model-View-ViewModel) architecture pattern. This project demonstrates best practices for state management, navigation, data persistence, and interactive user experiences in Flutter.
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 ## 📱 Project Overview
 
