@@ -12,6 +12,10 @@ tags:
   - features
   - implementation
   - docs
+image:
+   path: https://raw.githubusercontent.com/yadnyeshkolte/blog/images/structviz3d-react.webp
+   lqip: data:image/webp;base64,UklGRpIAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSBoAAAABF6CQbQQw/c8yIkJuFHIAgPyS57Y/HAaIaP8pAFZQOCBYAAAAsAEAnQEqEAAIAAVAfCWwAnS6AfgA/vUerLC1CWrHT+dSYXqxTBbnGXiTBWnHmxbOvmgW6TrjcC8jwMzGHMNJ5noS18I1gCJ3Z9OOyIIhgAAA
+   alt: StructViz3D React visualization
 ---
 
 # StructViz3D Documentation

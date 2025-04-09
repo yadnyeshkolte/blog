@@ -19,6 +19,11 @@ tags:
   - shell
 youtubeId: k6Qi45DaH94
 youtubeId1:  u0lAmWlk2EA
+image:
+  path: https://raw.githubusercontent.com/yadnyeshkolte/blog/images/crossdocs.webp
+  lqip: data:image/webp;base64,UklGRpIAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSBoAAAABF6CQbQQw/c8yIkJuFHIAgPyS57Y/HAaIaP8pAFZQOCBYAAAAsAEAnQEqEAAIAAVAfCWwAnS6AfgA/vUerLC1CWrHT+dSYXqxTBbnGXiTBWnHmxbOvmgW6TrjcC8jwMzGHMNJ5noS18I1gCJ3Z9OOyIIhgAAA
+  alt: CrossDocs application interface
+
 ---
 # CrossDocs 
 

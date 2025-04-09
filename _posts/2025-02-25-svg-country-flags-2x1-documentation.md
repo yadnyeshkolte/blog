@@ -16,6 +16,10 @@ tags:
   - svg-flag
   - npm
   - package
+image:
+  path: https://raw.githubusercontent.com/yadnyeshkolte/blog/images/svg-country-flags-2x1.webp
+  lqip: data:image/webp;base64,UklGRpIAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSBoAAAABF6CQbQQw/c8yIkJuFHIAgPyS57Y/HAaIaP8pAFZQOCBYAAAAsAEAnQEqEAAIAAVAfCWwAnS6AfgA/vUerLC1CWrHT+dSYXqxTBbnGXiTBWnHmxbOvmgW6TrjcC8jwMzGHMNJ5noS18I1gCJ3Z9OOyIIhgAAA
+  alt: SVG Country Flags collection
 ---
 # svg-country-flags-2x1
 A lightweight, flexible package for working with detailed country flags in JavaScript applications. Get access to flag SVGs, emoji, and country data. All flags maintain a 2:1 aspect ratio.
@@ -29,7 +33,6 @@ yarn add svg-country-flags-2x1
 # or
 pnpm add svg-country-flags-2x1
 ```
-![Flags](https://raw.githubusercontent.com/yadnyeshkolte/country-flags-svg-2x1/main/assets/image.png)
 
 ## Basic Usage
 

@@ -13,6 +13,10 @@ tags:
   - prototype
   - readme
 youtubeId: SDRGURhM56Y
+image:
+  path: https://raw.githubusercontent.com/yadnyeshkolte/blog/images/opensourcepen.webp
+  lqip: data:image/webp;base64,UklGRpIAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSBoAAAABF6CQbQQw/c8yIkJuFHIAgPyS57Y/HAaIaP8pAFZQOCBYAAAAsAEAnQEqEAAIAAVAfCWwAnS6AfgA/vUerLC1CWrHT+dSYXqxTBbnGXiTBWnHmxbOvmgW6TrjcC8jwMzGHMNJ5noS18I1gCJ3Z9OOyIIhgAAA
+  alt: OpenSourcePen project screenshot
 ---
 # Flutter Prototype E-Commerce App
 
