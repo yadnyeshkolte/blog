@@ -21,7 +21,7 @@ The Kotlin Structure Analyzer is a Gradle plugin that analyzes the structure of 
 
 #### Try It Out!
 
-The plugin is available on the Gradle Plugin Portal: [Here](https://claude.ai/chat/410c418d-3bf0-4150-af6a-3659a37bda95)
+The plugin is available on the Gradle Plugin Portal: [Here](https://plugins.gradle.org/plugin/io.github.yadnyeshkolte.kotlin-structure-analyzer)
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
