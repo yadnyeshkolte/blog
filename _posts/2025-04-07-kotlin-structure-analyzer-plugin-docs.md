@@ -19,6 +19,10 @@ youtubeId: dcF7iDYsFU8
 
 The Kotlin Structure Analyzer is a Gradle plugin that analyzes the structure of Kotlin source files in your project. It provides detailed information about classes, functions, and properties in your Kotlin codebase, and generates a comprehensive report in either JSON or text format.
 
+#### Try It Out!
+
+The plugin is available on the Gradle Plugin Portal: [Here](https://claude.ai/chat/410c418d-3bf0-4150-af6a-3659a37bda95)
+
 {% include youtubePlayer.html id=page.youtubeId %}
 
 ## Features
