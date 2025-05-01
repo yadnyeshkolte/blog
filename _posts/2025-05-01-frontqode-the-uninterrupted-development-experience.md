@@ -22,6 +22,7 @@ Enter **FrontQode** - a revolutionary cross-platform code editor designed to eli
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
+
 The modern developer's workflow is fragmented across numerous applications:
 
 - A code editor for writing code
