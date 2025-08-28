@@ -1,0 +1,181 @@
+{
+  "main": {
+    "id": "faeaa1522fe7185e",
+    "type": "split",
+    "children": [
+      {
+        "id": "b39b3d8b60ac8b1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55180b81bc619f1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-08-28-core-java-day-1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-08-28-core-java-day-1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d51261e2c8c4a2e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "8cfcd68909487f12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf42d99f744c2672",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "63fe8f0c78ea55a5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "terminal",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "156163e06c7cbca8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ef68ab1845fca578",
+    "type": "split",
+    "children": [
+      {
+        "id": "bcb2ec8f091c3f92",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4892dbe6e51e55e0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2024-02-04-esp32-atm-telegrambot-project.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024-02-04-esp32-atm-telegrambot-project"
+            }
+          },
+          {
+            "id": "1ef4ad66ab586bbb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2024-02-04-esp32-atm-telegrambot-project.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-02-04-esp32-atm-telegrambot-project"
+            }
+          },
+          {
+            "id": "aeab399e805431c8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d22ab3d10e8758a5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2024-02-04-esp32-atm-telegrambot-project.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024-02-04-esp32-atm-telegrambot-project"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "55180b81bc619f1b",
+  "lastOpenFiles": [
+    "_posts/2025-03-16-flutter-app-opensourcepen.md",
+    "_posts/2025-03-19-struct-viz-3d-desktop.md",
+    "_posts/2025-04-07-kotlin-structure-analyzer-plugin-docs.md",
+    "_posts/2025-05-01-frontqode-the-uninterrupted-development-experience.md",
+    "_posts/2025-08-28-core-java-day-1.md",
+    "_posts/2024-02-04-esp32-atm-telegrambot-project.md"
+  ]
+}
