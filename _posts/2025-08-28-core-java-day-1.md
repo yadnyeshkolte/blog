@@ -1,6 +1,6 @@
 ---
 title: Core Java Day 1
-date: 2025-08-28 10:00:00  +0530
+date: 2025-08-28 10:00:00 +0530
 categories:
   - Core Java
 tags:
