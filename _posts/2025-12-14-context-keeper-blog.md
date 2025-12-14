@@ -70,57 +70,51 @@ Powered by Hugging Face's Llama-3.2-3B-Instruct model and SentenceTransformer em
 
 ContextKeeper follows a modern multi-tier architecture designed for scalability and maintainability:
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        User Interface Layer                     │
-│                    (React + Vite + TypeScript)                  │
-│  ┌──────────┬──────────┬──────────┬──────────┬──────────────┐  │
-│  │  Query   │Knowledge │   AI     │  Branch  │     Sync     │  │
-│  │Interface │  Graph   │ Agents   │ Selector │    Status    │  │
-│  └──────────┴──────────┴──────────┴──────────┴──────────────┘  │
-└────────────────────────┬────────────────────────────────────────┘
-                         │ HTTP/REST (Port 5173 → 3000)
-┌────────────────────────▼────────────────────────────────────────┐
-│                      API Gateway Layer                          │
-│                  (Express.js - Node.js)                         │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  REST API Endpoints (15+)                                │  │
-│  │  • Query, Knowledge Graph, Sync, Status                  │  │
-│  │  • AI Agents, Branches, Config                           │  │
-│  └──────────────────────────────────────────────────────────┘  │
-└────────────────────────┬────────────────────────────────────────┘
-                         │ child_process.spawn()
-┌────────────────────────▼────────────────────────────────────────┐
-│                   AI Processing Layer                           │
-│                      (Python 3.9+)                              │
-│  ┌─────────────────────┬──────────────────────────────────┐    │
-│  │  Data Collectors    │      AI Agents                   │    │
-│  │  • github_collector │  • github_agent                  │    │
-│  │  • slack_collector  │  • slack_agent                   │    │
-│  │  • notion_collector │  • notion_agent                  │    │
-│  │  • rag_engine       │  • ai_summarizer                 │    │
-│  │  • knowledge_graph  │  • decision_engine               │    │
-│  └─────────────────────┴──────────────────────────────────┘    │
-└────────────────────────┬────────────────────────────────────────┘
-                         │
-        ┌────────────────┴────────────────┐
-        │                                 │
-┌───────▼──────────┐            ┌─────────▼────────┐
-│    MongoDB       │            │    ChromaDB      │
-│  (Metadata &     │            │  (Vector Store)  │
-│   Decisions)     │            │  Per Repo/Branch │
-└──────────────────┘            └──────────────────┘
-                         │
-┌────────────────────────▼────────────────────────────────────────┐
-│              Workflow Orchestration Layer                       │
-│                    (Kestra + Docker)                            │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │  Automated Workflows (YAML-based)                        │  │
-│  │  • Data collection scheduling                            │  │
-│  │  • AI analysis pipelines                                 │  │
-│  │  │  • Multi-agent orchestration                             │  │
-│  └──────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph UI["User Interface Layer<br/>(React + Vite + TypeScript)"]
+        QueryInterface[Query Interface]
+        KnowledgeGraph[Knowledge Graph]
+        AIAgents[AI Agents]
+        BranchSelector[Branch Selector]
+        SyncStatus[Sync Status]
+    end
+    
+    subgraph API["API Gateway Layer<br/>(Express.js - Node.js)<br/>Port 5173 → 3000"]
+        REST[REST API Endpoints<br/>Query, Knowledge Graph,<br/>Sync, Status, AI Agents,<br/>Branches, Config]
+    end
+    
+    subgraph Python["AI Processing Layer<br/>(Python 3.9+)"]
+        subgraph Collectors[Data Collectors]
+            GithubCollector[github_collector]
+            SlackCollector[slack_collector]
+            NotionCollector[notion_collector]
+            RAGEngine[rag_engine]
+            KG[knowledge_graph]
+        end
+        
+        subgraph Agents[AI Agents]
+            GithubAgent[github_agent]
+            SlackAgent[slack_agent]
+            NotionAgent[notion_agent]
+            AISummarizer[ai_summarizer]
+            DecisionEngine[decision_engine]
+        end
+    end
+    
+    subgraph Storage[Storage Layer]
+        MongoDB[(MongoDB<br/>Metadata & Decisions)]
+        ChromaDB[(ChromaDB<br/>Vector Store<br/>Per Repo/Branch)]
+    end
+    
+    subgraph Workflow["Workflow Orchestration Layer<br/>(Kestra + Docker)"]
+        AutoWorkflows[Automated Workflows<br/>• Data collection scheduling<br/>• AI analysis pipelines<br/>• Multi-agent orchestration]
+    end
+    
+    UI -->|HTTP/REST| API
+    API -->|child_process.spawn| Python
+    Python --> Storage
+    Workflow -.->|Orchestrates| Python
 ```
 
 ### Technology Stack
