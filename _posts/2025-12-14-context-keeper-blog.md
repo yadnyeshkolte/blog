@@ -12,7 +12,7 @@ tags:
   - java
   - workflows
 mermaid: true
-youtubeId:
+youtubeId: Jj1A36TeFkI
 ---
 
 
@@ -36,6 +36,8 @@ Modern development teams face several challenges:
 - **Decision Archaeology**: Finding out why a particular technology was chosen requires digging through months of history
 
 ContextKeeper addresses these pain points by creating a unified, queryable knowledge base that preserves and surfaces your team's collective intelligence.
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 ## ✨ Key Features
 
