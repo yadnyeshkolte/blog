@@ -11,6 +11,7 @@ tags:
   - ai
   - java
   - workflows
+mermaid: true
 youtubeId:
 ---
 
