@@ -11,6 +11,10 @@ tags:
   - ai
   - java
   - workflows
+image:
+  path: https://raw.githubusercontent.com/yadnyeshkolte/blog/images/context-keeper.webp
+  lqip: data:image/webp;base64,UklGRpIAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSBoAAAABF6CQbQQw/c8yIkJuFHIAgPyS57Y/HAaIaP8pAFZQOCBYAAAAsAEAnQEqEAAIAAVAfCWwAnS6AfgA/vUerLC1CWrHT+dSYXqxTBbnGXiTBWnHmxbOvmgW6TrjcC8jwMzGHMNJ5noS18I1gCJ3Z9OOyIIhgAAA
+  alt: Context Keeper application interface
 mermaid: true
 youtubeId: Jj1A36TeFkI
 ---
